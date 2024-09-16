@@ -1,0 +1,24 @@
+{
+  "name": "todo-api",
+  "description": "A simple backend for todo apps",
+  "version": "1.0.0",
+  "dependencies": {
+    "json-server": "^0.15.1"
+  },
+  "bin": {
+    "todo-api": "server.js"
+  },
+  "scripts": {
+    "start": "node server",
+    "serve": "serve ./src",
+    "cypress": "cypress open"
+  },
+  "main": "server.js",
+  "devDependencies": {
+    "cypress": "^13.14.2",
+    "serve": "^14.2.3"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
