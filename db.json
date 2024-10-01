@@ -2,8 +2,13 @@
   "todos": [
     {
       "description": "lerne CSS",
-      "done": false,
+      "done": true,
       "id": 1
+    },
+    {
+      "description": "Duplikat",
+      "done": false,
+      "id": 2
     }
   ]
 }

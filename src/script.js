@@ -48,8 +48,19 @@ function todosAnzeigen() {
 }
 
 neuerTodoBtn.addEventListener("click", () => {
-  const neuesTodoText = neuesTodoInput.value;
+  const neuesTodoText = neuesTodoInput.value.trim(); // Entfernt unnötige Leerzeichen
   if (!neuesTodoText) return;
+
+  // Überprüfen, ob das Todo bereits existiert
+  const todoExistiert = todos.some(
+    (todo) => todo.description.toLowerCase() === neuesTodoText.toLowerCase()
+  );
+
+  if (todoExistiert) {
+    alert("Dieses Todo existiert bereits!"); // Fehlermeldung
+    neuesTodoInput.value = ""; // Leert das Eingabefeld
+    return;
+  }
 
   const neuerEintrag = {
     description: neuesTodoText,
